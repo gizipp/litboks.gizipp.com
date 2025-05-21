@@ -3,7 +3,7 @@
     name="subscribe" 
     method="POST" 
     data-netlify="true"
-    action="/success"
+    action="/subscribe-success"
     netlify-honeypot="bot-field"
     class="flex flex-col sm:flex-row gap-3"
   >
@@ -46,7 +46,8 @@
   const nameField = document.getElementById('name-field');
 
   emailInput?.addEventListener('input', (e) => {
-    const email = e.target.value;
+    const target = e.target as HTMLInputElement;
+    const email = target.value;
     if (email.includes('@')) {
       nameField?.classList.remove('hidden');
     } else {
