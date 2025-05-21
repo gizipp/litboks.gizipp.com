@@ -10,78 +10,83 @@ import Layout from '../layouts/Layout.astro';
       <!-- Form Section -->
       <div>
         <div class="bg-white rounded-lg shadow-sm p-6">
-          <form name="submit-book" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <form 
+            name="submit-book" 
+            method="POST" 
+            data-netlify="true"
+            action="/success"
+            netlify-honeypot="bot-field"
+            class="space-y-6"
+          >
             <input type="hidden" name="form-name" value="submit-book" />
             <input type="hidden" name="bot-field" />
 
-            <div class="space-y-6">
-              <!-- Book Details -->
-              <div>
-                <h2 class="text-xl font-semibold mb-4">Detail Buku</h2>
-                <div class="space-y-4">
-                  <div>
-                    <label for="title" class="block text-sm font-medium text-gray-700">Judul Buku *</label>
-                    <input type="text" name="title" id="title" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+            <!-- Book Details -->
+            <div>
+              <h2 class="text-xl font-semibold mb-4">Detail Buku</h2>
+              <div class="space-y-4">
+                <div>
+                  <label for="title" class="block text-sm font-medium text-gray-700">Judul Buku *</label>
+                  <input type="text" name="title" id="title" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                </div>
 
-                  <div>
-                    <label for="author" class="block text-sm font-medium text-gray-700">Penulis *</label>
-                    <input type="text" name="author" id="author" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+                <div>
+                  <label for="author" class="block text-sm font-medium text-gray-700">Penulis *</label>
+                  <input type="text" name="author" id="author" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                </div>
 
-                  <div>
-                    <label for="genres" class="block text-sm font-medium text-gray-700">Genre *</label>
-                    <input type="text" name="genres" id="genres" required
-                      placeholder="Pisahkan dengan koma (contoh: Programming, Web Development)"
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+                <div>
+                  <label for="genres" class="block text-sm font-medium text-gray-700">Genre *</label>
+                  <input type="text" name="genres" id="genres" required
+                    placeholder="Pisahkan dengan koma (contoh: Programming, Web Development)"
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                </div>
 
-                  <div>
-                    <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi *</label>
-                    <textarea name="description" id="description" rows="4" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
-                  </div>
+                <div>
+                  <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi *</label>
+                  <textarea name="description" id="description" rows="4" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                </div>
 
-                  <div>
-                    <label for="url" class="block text-sm font-medium text-gray-700">URL Download *</label>
-                    <input type="url" name="url" id="url" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+                <div>
+                  <label for="url" class="block text-sm font-medium text-gray-700">URL Download *</label>
+                  <input type="url" name="url" id="url" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
                 </div>
               </div>
+            </div>
 
-              <!-- Submitter Details -->
-              <div>
-                <h2 class="text-xl font-semibold mb-4">Detail Pengirim</h2>
-                <div class="space-y-4">
-                  <div>
-                    <label for="submitter-name" class="block text-sm font-medium text-gray-700">Nama *</label>
-                    <input type="text" name="submitter-name" id="submitter-name" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+            <!-- Submitter Details -->
+            <div>
+              <h2 class="text-xl font-semibold mb-4">Detail Pengirim</h2>
+              <div class="space-y-4">
+                <div>
+                  <label for="submitter-name" class="block text-sm font-medium text-gray-700">Nama *</label>
+                  <input type="text" name="submitter-name" id="submitter-name" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                </div>
 
-                  <div>
-                    <label for="submitter-email" class="block text-sm font-medium text-gray-700">Email *</label>
-                    <input type="email" name="submitter-email" id="submitter-email" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
-                  </div>
+                <div>
+                  <label for="submitter-email" class="block text-sm font-medium text-gray-700">Email *</label>
+                  <input type="email" name="submitter-email" id="submitter-email" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                </div>
 
-                  <div>
-                    <label for="reason" class="block text-sm font-medium text-gray-700">Alasan Pengiriman *</label>
-                    <textarea name="reason" id="reason" rows="3" required
-                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
-                  </div>
+                <div>
+                  <label for="reason" class="block text-sm font-medium text-gray-700">Alasan Pengiriman *</label>
+                  <textarea name="reason" id="reason" rows="3" required
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
                 </div>
               </div>
+            </div>
 
-              <div class="pt-4">
-                <button type="submit"
-                  class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                  Kirim Buku
-                </button>
-              </div>
+            <div class="pt-4">
+              <button type="submit"
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Kirim Buku
+              </button>
             </div>
           </form>
         </div>
