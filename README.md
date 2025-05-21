@@ -1,4 +1,84 @@
-# Astro Starter Kit: Basics
+# LITBOKS
+
+Platform katalog dan review ebook indie gratis.
+
+## 🚀 Fitur
+
+- 📚 Katalog buku dengan kategori
+- 🔍 Halaman detail buku
+- 📥 Link download langsung
+- 🎨 UI modern dengan Tailwind CSS
+- 📱 Responsive design
+
+## 🛠️ Teknologi
+
+- [Astro](https://astro.build) - Framework web modern
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org) - Type safety
+- [Netlify](https://www.netlify.com) - Hosting & form handling
+
+## 🏗️ Struktur Proyek
+
+```
+litboks/
+├── public/
+│   └── covers/         # Cover buku
+├── src/
+│   ├── components/     # Komponen UI
+│   ├── layouts/        # Layout halaman
+│   ├── pages/          # Halaman website
+│   └── styles/         # Style global
+├── books.json          # Data buku
+└── submissions/        # Form submissions
+```
+
+## 🚀 Memulai
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/yourusername/litboks.git
+   cd litboks
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Jalankan development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Buka [http://localhost:3000](http://localhost:3000)
+
+## 📝 Menambah Buku
+
+1. Tambahkan data buku di `books.json`:
+   ```json
+   {
+     "title": "Judul Buku",
+     "author": "Nama Penulis",
+     "genres": ["Genre 1", "Genre 2"],
+     "description": "Deskripsi buku...",
+     "url": "https://link-download.com",
+     "cover": "/covers/nama-file.jpg"
+   }
+   ```
+
+2. Tambahkan cover buku di `public/covers/`
+
+## 🤝 Kontribusi
+
+1. Fork repository
+2. Buat branch baru (`git checkout -b fitur-baru`)
+3. Commit perubahan (`git commit -m 'feat: tambah fitur baru'`)
+4. Push ke branch (`git push origin fitur-baru`)
+5. Buat Pull Request
+
+## 📄 Lisensi
+
+MIT License - lihat [LICENSE](LICENSE) untuk detail.
 
 ```sh
 npm create astro@latest -- --template basics
