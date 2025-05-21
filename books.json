@@ -74,6 +74,23 @@
           "cover": "resolusi-tanpa-basi.png"
         }
       ]
+    },
+    {
+      "id": "fiction",
+      "name": "Fiksi & Sastra",
+      "books": [
+        {
+          "id": "wonderful-wizard-of-oz",
+          "title": "The Wonderful Wizard of Oz",
+          "author": "L. Frank Baum",
+          "genres": ["Fiksi", "Fantasi", "Sastra Anak"],
+          "description": "Kisah klasik tentang Dorothy, seorang gadis kecil dari Kansas yang terbawa angin tornado ke negeri ajaib Oz. Bersama teman-temannya - Scarecrow yang mencari otak, Tin Woodman yang mencari hati, dan Cowardly Lion yang mencari keberanian - mereka berpetualang mencari Wizard of Oz.",
+          "url": "https://www.gutenberg.org/ebooks/43936",
+          "status": "available",
+          "addedAt": "2024-05-21",
+          "cover": "wonderful-wizard-of-oz.png"
+        }
+      ]
     }
   ],
   "metadata": {
@@ -97,6 +114,10 @@
       {
         "id": "personal",
         "name": "Personal Development"
+      },
+      {
+        "id": "fiction",
+        "name": "Fiksi & Sastra"
       },
       {
         "id": "other",
