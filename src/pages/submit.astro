@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Kirim Buku - LITBOKS">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-8">Kirim Buku</h1>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Form Section -->
+      <div>
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <form name="submit-book" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="submit-book" />
+            <input type="hidden" name="bot-field" />
+
+            <div class="space-y-6">
+              <!-- Book Details -->
+              <div>
+                <h2 class="text-xl font-semibold mb-4">Detail Buku</h2>
+                <div class="space-y-4">
+                  <div>
+                    <label for="title" class="block text-sm font-medium text-gray-700">Judul Buku *</label>
+                    <input type="text" name="title" id="title" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="author" class="block text-sm font-medium text-gray-700">Penulis *</label>
+                    <input type="text" name="author" id="author" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="genres" class="block text-sm font-medium text-gray-700">Genre *</label>
+                    <input type="text" name="genres" id="genres" required
+                      placeholder="Pisahkan dengan koma (contoh: Programming, Web Development)"
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="description" class="block text-sm font-medium text-gray-700">Deskripsi *</label>
+                    <textarea name="description" id="description" rows="4" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                  </div>
+
+                  <div>
+                    <label for="url" class="block text-sm font-medium text-gray-700">URL Download *</label>
+                    <input type="url" name="url" id="url" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submitter Details -->
+              <div>
+                <h2 class="text-xl font-semibold mb-4">Detail Pengirim</h2>
+                <div class="space-y-4">
+                  <div>
+                    <label for="submitter-name" class="block text-sm font-medium text-gray-700">Nama *</label>
+                    <input type="text" name="submitter-name" id="submitter-name" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="submitter-email" class="block text-sm font-medium text-gray-700">Email *</label>
+                    <input type="email" name="submitter-email" id="submitter-email" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="reason" class="block text-sm font-medium text-gray-700">Alasan Pengiriman *</label>
+                    <textarea name="reason" id="reason" rows="3" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <button type="submit"
+                  class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  Kirim Buku
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Info Section -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h2 class="text-xl font-semibold mb-4">Proses Review</h2>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600">
+                  1
+                </span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">Verifikasi Awal</h3>
+                <p class="mt-1 text-gray-600">
+                  Tim kami akan memverifikasi kelengkapan data dan validitas link download dalam 24 jam pertama.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600">
+                  2
+                </span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">Review Konten</h3>
+                <p class="mt-1 text-gray-600">
+                  Kami akan memeriksa kualitas konten dan memastikan buku memenuhi standar kami dalam 24 jam berikutnya.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600">
+                  3
+                </span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-medium text-gray-900">Publikasi</h3>
+                <p class="mt-1 text-gray-600">
+                  Jika disetujui, buku akan ditambahkan ke katalog dalam 24 jam terakhir. Anda akan mendapat notifikasi via email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-lg p-6">
+          <h3 class="text-lg font-medium text-blue-900 mb-2">Catatan Penting</h3>
+          <ul class="list-disc pl-5 space-y-2 text-blue-800">
+            <li>Total waktu review maksimal 3x24 jam</li>
+            <li>Anda akan mendapat notifikasi di setiap tahap</li>
+            <li>Buku harus tersedia secara gratis</li>
+            <li>Buku harus memiliki lisensi yang memungkinkan distribusi</li>
+            <li>Konten harus original dan berkualitas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout> 
