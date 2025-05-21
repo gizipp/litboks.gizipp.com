@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BookCard from '../components/BookCard.astro';
+import SubscribeForm from '../components/SubscribeForm.astro';
 import booksData from '../../books.json';
 
 interface Book {
@@ -31,9 +32,10 @@ const { categories } = booksData as { categories: Category[] };
 	<main class="container mx-auto px-4 py-8">
 		<div class="text-center mb-12">
 			<h1 class="text-4xl font-bold mb-4">Katalog Ebook Indie Gratis</h1>
-			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
 				Temukan ebook indie berkualitas yang tersedia secara gratis.
 			</p>
+			<SubscribeForm />
 		</div>
 
 		<div class="space-y-12">
