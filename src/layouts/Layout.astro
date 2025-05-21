@@ -1,14 +1,37 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title} | LITBOKS</title>
 	</head>
 	<body>
-		<slot />
+		<header class="bg-white shadow-sm">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+				<nav class="flex items-center justify-between">
+					<a href="/" class="text-xl font-bold text-gray-900">LITBOKS</a>
+					<div class="flex items-center gap-4">
+						<a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a>
+						<a href="/kategori" class="text-gray-600 hover:text-gray-900">Kategori</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<slot />
+		</main>
 	</body>
 </html>
 

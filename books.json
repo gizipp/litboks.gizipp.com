@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "lastUpdated": "2024-05-21",
   "categories": [
     {
@@ -14,7 +14,8 @@
           "description": "Catatan-catatan seorang software engineer tentang pengembangan perangkat lunak, best practices, dan pengalaman dalam industri teknologi.",
           "url": "https://kotarois.me/product/e3f98971-467e-47e8-952e-c808d5864bb8",
           "status": "available",
-          "addedAt": "2024-05-21"
+          "addedAt": "2024-05-21",
+          "cover": "software-engineers-notes.jpg"
         },
         {
           "id": "self-hosting-dengan-dokku",
@@ -24,7 +25,8 @@
           "description": "Panduan lengkap tentang cara melakukan self-hosting menggunakan Dokku, platform open source yang memudahkan deployment aplikasi.",
           "url": "https://me.bikinajadulu.web.id/products/self-hosting-dengan-dokku-21d5150c631b2c97",
           "status": "available",
-          "addedAt": "2024-05-21"
+          "addedAt": "2024-05-21",
+          "cover": "self-hosting-dokku.jpg"
         }
       ]
     },
@@ -40,7 +42,19 @@
           "description": "Buku yang membahas tentang pendekatan berbeda dalam pengembangan perangkat lunak, fokus pada kesederhanaan dan efisiensi.",
           "url": "https://books.37signals.com/8/getting-real",
           "status": "available",
-          "addedAt": "2024-05-21"
+          "addedAt": "2024-05-21",
+          "cover": "getting-real.jpg"
+        },
+        {
+          "id": "shape-up",
+          "title": "Shape Up",
+          "author": "Ryan Singer (Basecamp)",
+          "genres": ["Product Management", "Software Development", "Work Culture"],
+          "description": "Buku panduan pengembangan produk dari tim Basecamp yang anti scrum dan sprint, menawarkan sistem 'betting' dan cycle yang unik.",
+          "url": "https://basecamp.com/shapeup",
+          "status": "available",
+          "addedAt": "2024-05-21",
+          "cover": "shape-up.jpg"
         }
       ]
     }
@@ -90,4 +104,4 @@
       }
     ]
   }
-} 
+}
