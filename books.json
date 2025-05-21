@@ -1,0 +1,93 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-05-21",
+  "categories": [
+    {
+      "id": "tech",
+      "name": "Teknologi & Programming",
+      "books": [
+        {
+          "id": "software-engineers-notes",
+          "title": "Software Engineer's Notes",
+          "author": "Kotaro",
+          "genres": ["Teknologi", "Programming", "Software Development"],
+          "description": "Catatan-catatan seorang software engineer tentang pengembangan perangkat lunak, best practices, dan pengalaman dalam industri teknologi.",
+          "url": "https://kotarois.me/product/e3f98971-467e-47e8-952e-c808d5864bb8",
+          "status": "available",
+          "addedAt": "2024-05-21"
+        },
+        {
+          "id": "self-hosting-dengan-dokku",
+          "title": "Self-hosting dengan Dokku",
+          "author": "Adi P",
+          "genres": ["DevOps", "Server", "Deployment"],
+          "description": "Panduan lengkap tentang cara melakukan self-hosting menggunakan Dokku, platform open source yang memudahkan deployment aplikasi.",
+          "url": "https://me.bikinajadulu.web.id/products/self-hosting-dengan-dokku-21d5150c631b2c97",
+          "status": "available",
+          "addedAt": "2024-05-21"
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Business & Product Management",
+      "books": [
+        {
+          "id": "getting-real",
+          "title": "Getting Real",
+          "author": "Jason Fried, David Heinemeier Hansson, Matt Linderman",
+          "genres": ["Business", "Software Development", "Product Management"],
+          "description": "Buku yang membahas tentang pendekatan berbeda dalam pengembangan perangkat lunak, fokus pada kesederhanaan dan efisiensi.",
+          "url": "https://books.37signals.com/8/getting-real",
+          "status": "available",
+          "addedAt": "2024-05-21"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "categories": [
+      {
+        "id": "tech",
+        "name": "Teknologi & Programming"
+      },
+      {
+        "id": "business",
+        "name": "Business & Product Management"
+      },
+      {
+        "id": "design",
+        "name": "Design & UX"
+      },
+      {
+        "id": "writing",
+        "name": "Writing & Content"
+      },
+      {
+        "id": "personal",
+        "name": "Personal Development"
+      },
+      {
+        "id": "other",
+        "name": "Lainnya"
+      }
+    ],
+    "statuses": [
+      {
+        "id": "available",
+        "name": "Tersedia",
+        "emoji": "✅"
+      },
+      {
+        "id": "processing",
+        "name": "Dalam Proses",
+        "emoji": "🔄"
+      },
+      {
+        "id": "unavailable",
+        "name": "Tidak Tersedia",
+        "emoji": "❌"
+      }
+    ]
+  }
+} 
