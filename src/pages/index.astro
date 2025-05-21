@@ -3,23 +3,58 @@ import Layout from '../layouts/Layout.astro';
 import BookCard from '../components/BookCard.astro';
 import booksData from '../../books.json';
 
-const { categories } = booksData;
+interface Book {
+	id: string;
+	title: string;
+	author: string;
+	genres: string[];
+	description: string;
+	url: string;
+	status: string;
+	addedAt: string;
+	cover: string;
+}
+
+interface Category {
+	id: string;
+	name: string;
+	books: Book[];
+}
+
+const { categories } = booksData as { categories: Category[] };
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Beranda">
-	<div class="space-y-8">
-		{categories.map(category => (
-			<section>
-				<h2 class="text-2xl font-bold mb-4">{category.name}</h2>
-				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-					{category.books.map(book => (
-						<BookCard {...book} />
-					))}
-				</div>
-			</section>
-		))}
-	</div>
+<Layout title="LITBOKS - Katalog Ebook Indie Gratis">
+	<main class="container mx-auto px-4 py-8">
+		<div class="text-center mb-12">
+			<h1 class="text-4xl font-bold mb-4">Katalog Ebook Indie Gratis</h1>
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+				Temukan ribuan ebook indie berkualitas yang tersedia secara gratis. 
+				Dari programming hingga self-development, semua ada di sini.
+			</p>
+		</div>
+
+		<div class="space-y-12">
+			{categories.map((category) => (
+				<section>
+					<h2 class="text-2xl font-bold mb-6">{category.name}</h2>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+						{category.books.map((book) => (
+							<BookCard {...book} />
+						))}
+					</div>
+				</section>
+			))}
+		</div>
+
+		<div class="mt-12 text-center">
+			<a href="/submit" 
+				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+				Kirim Buku
+			</a>
+		</div>
+	</main>
 </Layout>
