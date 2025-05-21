@@ -15,7 +15,7 @@
           "url": "https://kotarois.me/product/e3f98971-467e-47e8-952e-c808d5864bb8",
           "status": "available",
           "addedAt": "2024-05-21",
-          "cover": "software-engineers-notes.jpg"
+          "cover": "software-engineers-notes.png"
         },
         {
           "id": "self-hosting-dengan-dokku",
@@ -26,7 +26,7 @@
           "url": "https://me.bikinajadulu.web.id/products/self-hosting-dengan-dokku-21d5150c631b2c97",
           "status": "available",
           "addedAt": "2024-05-21",
-          "cover": "self-hosting-dokku.jpg"
+          "cover": "self-hosting-dokku.png"
         }
       ]
     },
@@ -43,7 +43,7 @@
           "url": "https://books.37signals.com/8/getting-real",
           "status": "available",
           "addedAt": "2024-05-21",
-          "cover": "getting-real.jpg"
+          "cover": "getting-real.png"
         },
         {
           "id": "shape-up",
@@ -54,7 +54,24 @@
           "url": "https://basecamp.com/shapeup",
           "status": "available",
           "addedAt": "2024-05-21",
-          "cover": "shape-up.jpg"
+          "cover": "shape-up.png"
+        }
+      ]
+    },
+    {
+      "id": "personal",
+      "name": "Personal Development",
+      "books": [
+        {
+          "id": "resolusi-tanpa-basi",
+          "title": "Resolusi Tanpa Basi",
+          "author": "Darmawan Aji",
+          "genres": ["Personal Development", "Productivity"],
+          "description": "Ebook premium yang membahas tentang cara membuat dan menepati resolusi dengan pendekatan yang lebih jernih dan efektif.",
+          "url": "https://darmawanaji.com/innercircle/",
+          "status": "available",
+          "addedAt": "2024-05-21",
+          "cover": "resolusi-tanpa-basi.png"
         }
       ]
     }
