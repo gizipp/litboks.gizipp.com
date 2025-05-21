@@ -13,7 +13,11 @@ interface Props {
 const { id, title, author, genres, description, url, status, cover } = Astro.props;
 ---
 
-<a href={`/buku/${id}`} class="block bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4">
+<a 
+  href={`/buku/${id}`} 
+  data-umami-event={`View Book - ${title}`}
+  class="block bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4"
+>
   <div class="aspect-[3/4] bg-gray-100 rounded-lg mb-4 overflow-hidden">
     {cover ? (
       <img 

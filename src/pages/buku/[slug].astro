@@ -49,9 +49,10 @@ downloadUrl.searchParams.set('ref', 'litboks');
             href={downloadUrl.toString()} 
             target="_blank" 
             rel="noopener noreferrer"
+            data-umami-event={`Download Book - ${book.title}`}
             class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Baca
+            Download Buku
           </a>
         </div>
       </div>

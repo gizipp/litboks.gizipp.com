@@ -42,7 +42,7 @@ const { categories } = booksData as { categories: Category[] };
 			{categories.map((category) => (
 				<section>
 					<h2 class="text-2xl font-bold mb-6">{category.name}</h2>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
 						{category.books.map((book) => (
 							<BookCard {...book} />
 						))}
@@ -52,8 +52,11 @@ const { categories } = booksData as { categories: Category[] };
 		</div>
 
 		<div class="mt-12 text-center">
-			<a href="/submit" 
-				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+			<a 
+				href="/submit" 
+				data-umami-event="Submit Book Button"
+				class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+			>
 				Kirim Buku
 			</a>
 		</div>
