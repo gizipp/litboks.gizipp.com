@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import RatingStars from '../../components/RatingStars.astro';
+import ReviewForm from '../../components/ReviewForm.astro';
 import booksData from '../../../books.json';
 
 export async function getStaticPaths() {
@@ -17,11 +19,29 @@ const { book } = Astro.props;
 // Tambahkan parameter ref ke URL
 const downloadUrl = new URL(book.url);
 downloadUrl.searchParams.set('ref', 'litboks');
+
+// Dummy reviews for now (will be replaced with real data later)
+// const reviews = [
+//   {
+//     id: 1,
+//     reviewer: "John Doe",
+//     rating: 5,
+//     comment: "Buku yang sangat informatif dan mudah dipahami. Sangat direkomendasikan untuk pemula yang ingin belajar tentang topik ini.",
+//     date: "2024-05-21"
+//   },
+//   {
+//     id: 2,
+//     reviewer: "Jane Smith",
+//     rating: 4,
+//     comment: "Kontennya bagus dan terstruktur dengan baik. Beberapa bagian bisa dijelaskan lebih detail, tapi secara keseluruhan sangat bermanfaat.",
+//     date: "2024-05-20"
+//   }
+// ];
 ---
 
 <Layout title={book.title}>
   <article class="max-w-3xl mx-auto">
-    <div class="bg-white rounded-lg shadow-sm p-6">
+    <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
       <div class="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8">
         <div class="aspect-[3/4] bg-gray-100 rounded-lg overflow-hidden">
           {book.cover ? (
@@ -56,6 +76,33 @@ downloadUrl.searchParams.set('ref', 'litboks');
           </a>
         </div>
       </div>
+    </div>
+
+    <!-- Review Section -->
+    <div class="bg-white rounded-lg shadow-sm p-6">
+      <h2 class="text-2xl font-bold mb-6">Review</h2>
+      
+      <!-- Review Form -->
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold mb-4">Tulis Review</h3>
+        <ReviewForm />
+      </div>
+
+      <!-- Review List -->
+      <!-- <div class="space-y-6">
+        {reviews.map(review => (
+          <div class="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <span class="font-medium">{review.reviewer}</span>
+                <RatingStars rating={review.rating} size="sm" />
+              </div>
+              <span class="text-sm text-gray-500">{review.date}</span>
+            </div>
+            <p class="text-gray-700">{review.comment}</p>
+          </div>
+        ))}
+      </div> -->
     </div>
   </article>
 </Layout> 
