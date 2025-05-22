@@ -22,6 +22,16 @@ interface Category {
 	books: Book[];
 }
 
+// Generate static paths for all book slugs
+export async function getStaticPaths() {
+	const booksData = await import('../../../books.json');
+	const categories = booksData.default.categories || booksData.categories;
+	const allBooks = categories.flatMap(category => category.books);
+	return allBooks.map(book => ({
+		params: { slug: book.id }
+	}));
+}
+
 const { categories } = booksData as { categories: Category[] };
 
 // Get book slug from URL
@@ -33,7 +43,10 @@ const book = allBooks.find(b => b.id === slug);
 
 // If book not found, return 404
 if (!book) {
-	return Astro.redirect('/404');
+	return {
+		props: {},
+		notFound: true
+	};
 }
 
 // Get book's category

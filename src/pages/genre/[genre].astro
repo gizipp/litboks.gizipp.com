@@ -3,9 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import BookCard from '../../components/BookCard.astro';
 import booksData from '../../../books.json';
 
-// Make this page server-rendered
-export const prerender = false;
-
 interface Book {
 	id: string;
 	title: string;
@@ -38,6 +35,17 @@ const allGenres = [...new Set(allBooks.flatMap(book => book.genres))].sort();
 const genreBooks = allBooks.filter(book => 
 	book.genres.some(g => g.toLowerCase() === decodedGenre.toLowerCase())
 );
+
+// Generate static paths for all genres
+export async function getStaticPaths() {
+	const booksData = await import('../../../books.json');
+	const categories = booksData.default.categories || booksData.categories;
+	const allBooks = categories.flatMap(category => category.books);
+	const allGenres = [...new Set(allBooks.flatMap(book => book.genres))].sort();
+	return allGenres.map(genre => ({
+		params: { genre: genre.toLowerCase() }
+	}));
+}
 ---
 
 <Layout title={`${decodedGenre} - LITBOKS`}>
