@@ -2,7 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import BookCard from '../components/BookCard.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
+import RatingStars from '../components/RatingStars.astro';
 import booksData from '../../books.json';
+import reviewsData from '../../reviews.json';
 
 interface Book {
 	id: string;
@@ -22,10 +24,31 @@ interface Category {
 	books: Book[];
 }
 
-const { categories } = booksData as { categories: Category[] };
+interface Review {
+	id: string;
+	bookId: string;
+	bookTitle: string;
+	reviewerName: string;
+	rating: number;
+	comment: string;
+	date: string;
+}
+
+const { categories, metadata } = booksData as { categories: Category[], metadata: { categories: { id: string, name: string }[] } };
+const { reviews } = reviewsData as { reviews: Review[] };
 
 // Filter categories yang memiliki buku
 const categoriesWithBooks = categories.filter(category => category.books && category.books.length > 0);
+
+// Get latest books (sorted by addedAt)
+const allBooks = categoriesWithBooks.flatMap(category => category.books);
+const latestBooks = [...allBooks].sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime()).slice(0, 5);
+
+// Get all genres for navigation
+const allGenres = [...new Set(allBooks.flatMap(book => book.genres))].sort();
+
+// Get recent reviews (sorted by date)
+const recentReviews = [...reviews].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -41,6 +64,62 @@ const categoriesWithBooks = categories.filter(category => category.books && cate
 			<SubscribeForm />
 		</div>
 
+		<!-- Latest Books Section -->
+		<section class="mb-12">
+			<h2 class="text-2xl font-bold mb-6">Buku Terbaru</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+				{latestBooks.map((book) => (
+					<BookCard {...book} />
+				))}
+			</div>
+		</section>
+
+		<!-- Recent Reviews Section -->
+		<section class="mb-12">
+			<h2 class="text-2xl font-bold mb-6">Review Terbaru</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{recentReviews.map((review) => (
+					<div class="bg-white rounded-lg shadow-md p-6">
+						<div class="flex items-center justify-between mb-4">
+							<h3 class="text-lg font-semibold">
+								<a href={`/buku/${review.bookId}`} class="hover:text-blue-600">
+									{review.bookTitle}
+								</a>
+							</h3>
+							<RatingStars rating={review.rating} size="sm" />
+						</div>
+						<p class="text-gray-600 mb-4 line-clamp-3">{review.comment}</p>
+						<div class="flex items-center justify-between text-sm text-gray-500">
+							<span>{review.reviewerName}</span>
+							<time datetime={review.date}>
+								{new Date(review.date).toLocaleDateString('id-ID', {
+									year: 'numeric',
+									month: 'long',
+									day: 'numeric'
+								})}
+							</time>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<!-- Genre Navigation -->
+		<section class="mb-12">
+			<h2 class="text-2xl font-bold mb-6">Jelajahi Genre</h2>
+			<div class="flex flex-wrap gap-2">
+				{allGenres.map((genre) => (
+					<a 
+						href={`/genre/${genre.toLowerCase()}`}
+						class="px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-sm font-medium text-gray-700 transition-colors"
+					>
+						{genre}
+					</a>
+				))}
+			</div>
+		</section>
+
+		<!-- Categories Section -->
 		<div class="space-y-12">
 			{categoriesWithBooks.map((category) => (
 				<section>

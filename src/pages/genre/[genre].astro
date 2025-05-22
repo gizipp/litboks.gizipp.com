@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BookCard from '../../components/BookCard.astro';
+import booksData from '../../../books.json';
+
+// Make this page server-rendered
+export const prerender = false;
+
+interface Book {
+	id: string;
+	title: string;
+	author: string;
+	genres: string[];
+	description: string;
+	url: string;
+	status: string;
+	addedAt: string;
+	cover: string;
+}
+
+interface Category {
+	id: string;
+	name: string;
+	books: Book[];
+}
+
+const { categories } = booksData as { categories: Category[] };
+
+// Get genre from URL
+const { genre } = Astro.params;
+const decodedGenre = decodeURIComponent(genre || '');
+
+// Get all books and genres
+const allBooks = categories.flatMap(category => category.books);
+const allGenres = [...new Set(allBooks.flatMap(book => book.genres))].sort();
+
+// Filter books by genre (case-insensitive)
+const genreBooks = allBooks.filter(book => 
+	book.genres.some(g => g.toLowerCase() === decodedGenre.toLowerCase())
+);
+---
+
+<Layout title={`${decodedGenre} - LITBOKS`}>
+	<main class="container mx-auto px-4 py-8">
+		<div class="mb-12">
+			<h1 class="text-4xl font-bold mb-4">Genre: {decodedGenre}</h1>
+			<p class="text-lg text-gray-600">
+				{genreBooks.length} buku ditemukan dalam genre ini.
+			</p>
+		</div>
+
+		<!-- Genre Navigation -->
+		<section class="mb-12">
+			<h2 class="text-2xl font-bold mb-6">Jelajahi Genre Lainnya</h2>
+			<div class="flex flex-wrap gap-2">
+				{allGenres.map((g) => (
+					<a 
+						href={`/genre/${g.toLowerCase()}`}
+						class={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+							g.toLowerCase() === decodedGenre.toLowerCase()
+								? 'bg-blue-600 text-white'
+								: 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+						}`}
+					>
+						{g}
+					</a>
+				))}
+			</div>
+		</section>
+
+		<!-- Books Grid -->
+		<section>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+				{genreBooks.map((book) => (
+					<BookCard {...book} />
+				))}
+			</div>
+		</section>
+
+		<!-- Empty State -->
+		{genreBooks.length === 0 && (
+			<div class="text-center py-12">
+				<p class="text-lg text-gray-600 mb-4">
+					Belum ada buku dalam genre ini.
+				</p>
+				<a 
+					href="/submit" 
+					class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+				>
+					Kirim Buku
+				</a>
+			</div>
+		)}
+	</main>
+</Layout> 

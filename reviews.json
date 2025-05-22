@@ -1,0 +1,31 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "bookId": "getting-real",
+      "bookTitle": "Getting Real",
+      "reviewerName": "John Doe",
+      "rating": 5,
+      "comment": "Buku yang sangat inspiratif untuk para founder startup. Membahas tentang bagaimana membangun produk yang benar-benar dibutuhkan user.",
+      "date": "2024-03-20T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "bookId": "self-hosting-dengan-dokku",
+      "bookTitle": "Self Hosting dengan Dokku",
+      "reviewerName": "Jane Smith",
+      "rating": 4,
+      "comment": "Panduan yang sangat jelas untuk memulai self-hosting dengan Dokku. Sangat membantu untuk developer yang ingin mengelola server sendiri.",
+      "date": "2024-03-19T15:30:00Z"
+    },
+    {
+      "id": "3",
+      "bookId": "software-engineers-notes",
+      "bookTitle": "Software Engineer's Notes",
+      "reviewerName": "Alex Johnson",
+      "rating": 5,
+      "comment": "Kumpulan catatan yang sangat berharga untuk software engineer. Berisi best practices dan tips yang bisa langsung diterapkan.",
+      "date": "2024-03-18T09:15:00Z"
+    }
+  ]
+} 
