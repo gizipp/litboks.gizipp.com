@@ -13,7 +13,7 @@
 Banyak ebook digital berkualitas yang tidak dikenal luas karena kurangnya kurasi, review, dan eksposur. **LITBOKS** hadir untuk mengisi celah tersebut: platform katalog ebook gratis dan legal, dengan fitur review serta sorotan komunitas.
 
 ### 🎯 Visi
-> “LITBOKS: Baca, Ulas, Sebar Karya Digital”
+> "LITBOKS: Baca, Ulas, Sebar Karya Digital"
 
 ---
 
@@ -45,9 +45,14 @@ Banyak ebook digital berkualitas yang tidak dikenal luas karena kurangnya kurasi
 - Review pengguna
 
 ### ✅ 4. Sistem Review
-- Rating bintang (1–5)
-- Komentar (min. 100 karakter)
-- Highlight kutipan favorit (opsional)
+- Sistem diamond (1-3)
+  - 💎 Berkualitas
+  - 💎💎 Sangat Berkualitas
+  - 💎💎💎 Premium
+- Secondary tags (opsional)
+  - 🎯 Tujuan: Referensi, Tutorial, Inspirasi
+  - 🌱 Level: Dasar, Menengah, Lanjutan
+  - 📝 Format: Step-by-step, Konseptual
 - Upvote review pengguna lain
 
 ### ✅ 5. Profil Pengguna (basic)
@@ -80,7 +85,7 @@ src/
 ├── components/           # Komponen yang dapat digunakan kembali
 │   ├── BookCard.astro    # Komponen untuk menampilkan kartu buku
 │   ├── ReviewForm.jsx    # Form untuk menulis review
-│   └── RatingStars.jsx   # Komponen rating bintang
+│   └── DiamondRating.jsx # Komponen rating diamond
 ├── content/             # Konten statis
 │   └── books/           # File markdown untuk setiap buku
 ├── pages/               # Halaman-halaman Astro
@@ -98,7 +103,7 @@ src/
 
 ### 🚀 Tahap 1: MVP Launch (Mei–Juni)
 - Layout awal dan katalog 10 buku
-- Sistem review dasar (bintang + komentar)
+- Sistem review dasar (diamond + komentar)
 - Deploy ke `litboks.gizipp.com`
 
 ### 🌱 Tahap 2: Komunitas & Interaksi (Juli)

@@ -1,6 +1,6 @@
 # LITBOKS
 
-Platform katalog dan review ebook gratis.
+Platform katalog ebook gratis dan bernilai 
 
 ## 🚀 Fitur
 
@@ -8,7 +8,10 @@ Platform katalog dan review ebook gratis.
 - 🔍 Halaman detail buku
 - 📥 Link download langsung
 - 🎨 UI modern dengan Tailwind CSS
-- 📱 Responsive design
+- �� Responsive design
+- 💎 Sistem review dengan diamond rating (💎-💎💎💎)
+- 📝 Secondary tags untuk konteks review
+- 🔍 Filter & pencarian
 
 ## 🛠️ Teknologi
 
@@ -120,10 +123,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# litboks.gizipp.com
+| `npm run astro ...`

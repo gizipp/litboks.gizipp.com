@@ -19,8 +19,14 @@ Analisis ini mengidentifikasi 20% fitur yang akan memberikan 80% nilai untuk pla
 ### 2. Sistem Review Dasar (PRIORITAS KEDUA)
 - **Alasan:** Membangun kepercayaan dan komunitas
 - **Fitur Wajib:**
-  - Rating bintang (1-5)
-  - Komentar sederhana
+  - Sistem diamond (1-3)
+    - 💎 Berkualitas
+    - 💎💎 Sangat Berkualitas
+    - 💎💎💎 Premium
+  - Secondary tags (opsional)
+    - 🎯 Tujuan: Referensi, Tutorial, Inspirasi
+    - 🌱 Level: Dasar, Menengah, Lanjutan
+    - 📝 Format: Step-by-step, Konseptual
   - Tampilan review di halaman buku
 
 ### 3. Beranda Minimal (PRIORITAS KETIGA)
@@ -53,10 +59,11 @@ Analisis ini mengidentifikasi 20% fitur yang akan memberikan 80% nilai untuk pla
 ### 3. Fitur Review Lanjutan
 - **Alasan:** Bisa ditambahkan setelah validasi konsep dasar
 - **Ditunda:**
-  - Highlight kutipan
   - Upvote review
-  - Sistem rekomendasi
-  - Fitur sosial
+  - Filter review berdasarkan:
+    - Diamond rating
+    - Secondary tags
+    - Tanggal
 
 ---
 
@@ -110,6 +117,12 @@ Analisis ini mengidentifikasi 20% fitur yang akan memberikan 80% nilai untuk pla
 - Jumlah pengguna aktif
 - Tingkat engagement dengan review
 - Konversi ke pembaca buku
+
+### Metrik & KPIs
+- Jumlah review yang dibuat
+- Distribusi diamond rating
+- Penggunaan secondary tags
+- Tingkat engagement dengan review
 
 ---
 

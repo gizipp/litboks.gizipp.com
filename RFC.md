@@ -54,7 +54,7 @@ Ebook digital di Indonesia terus bertumbuh, namun kurang dukungan dari sisi revi
 - Halaman Beranda: Sorotan buku dan review terbaru  
 - Halaman Katalog: Daftar buku, filter genre & pencarian  
 - Halaman Detail Buku: Info, link download, review  
-- Sistem Review: Rating bintang, komentar, kutipan favorit  
+- Sistem Review: Diamond rating, komentar, secondary tags  
 - Profil Reviewer: Basic (nama, review, daftar bacaan)  
 - Admin/Kurator: Tambah/edit buku, sorotan mingguan
 
@@ -63,7 +63,7 @@ Ebook digital di Indonesia terus bertumbuh, namun kurang dukungan dari sisi revi
 ## 🧪 Pertanyaan untuk Diskusi
 
 1. **Struktur Buku:** Markdown lokal atau sumber eksternal (Airtable, Notion API)?  
-2. **Review System:** Cukup rating + komentar atau perlu fitur lanjutan (kutipan, tag)?  
+2. **Review System:** Cukup diamond rating + komentar atau perlu fitur lanjutan (secondary tags)?  
 3. **Moderasi:** Apakah butuh login semua reviewer? Atau semi-anonim dengan kurasi?  
 4. **Distribusi File:** File PDF/EPUB di-host di public folder atau link ke sumber asli?  
 5. **Kurasi Komunitas:** Perlu voting/rekomendasi buku dari pengguna?
