@@ -1,0 +1,30 @@
+---
+interface Props {
+  rating: 1 | 2 | 3;
+  interactive?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { rating, interactive = false, size = 'md' } = Astro.props;
+
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8'
+};
+
+const diamonds = Array.from({ length: 3 }, (_, i) => ({
+  id: i + 1,
+  filled: i < rating
+}));
+---
+
+<div class="flex items-center gap-1">
+  {diamonds.map(diamond => (
+    <span
+      class={`${sizeClasses[size]} ${diamond.filled ? 'text-blue-600' : 'text-gray-300'}`}
+    >
+      💎
+    </span>
+  ))}
+</div> 

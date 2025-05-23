@@ -1,0 +1,31 @@
+---
+interface Props {
+  name: string;
+  value: number;
+  checked?: boolean;
+  required?: boolean;
+}
+
+const { name, value, checked = false, required = false } = Astro.props;
+---
+
+<label class="relative flex flex-col items-center cursor-pointer group">
+  <input 
+    type="radio" 
+    name={name} 
+    value={value} 
+    class="peer sr-only" 
+    checked={checked}
+    required={required}
+  />
+  <div class="flex gap-1">
+    {Array.from({ length: value }, (_, i) => (
+      <span class="text-2xl text-gray-300 peer-checked:text-blue-600 group-hover:text-blue-400 transition-colors">
+        💎
+      </span>
+    ))}
+  </div>
+  <span class="text-sm text-gray-500 mt-1 peer-checked:text-blue-600">
+    {value === 1 ? 'Berkualitas' : value === 2 ? 'Sangat Berkualitas' : 'Premium'}
+  </span>
+</label> 

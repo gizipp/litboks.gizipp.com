@@ -2,30 +2,185 @@
   "reviews": [
     {
       "id": "1",
-      "bookId": "getting-real",
-      "bookTitle": "Getting Real",
+      "bookId": "react-js-handbook",
+      "bookTitle": "React.js Handbook",
+      "comment": "Buku yang sangat membantu untuk memahami dasar-dasar React.js. Penjelasannya jelas dan contohnya mudah dipahami.",
+      "date": "2024-03-15",
       "reviewerName": "John Doe",
-      "rating": 5,
-      "comment": "Buku yang sangat inspiratif untuk para founder startup. Membahas tentang bagaimana membangun produk yang benar-benar dibutuhkan user.",
-      "date": "2024-03-20T10:00:00Z"
+      "rating": 2,
+      "tags": {
+        "purpose": ["Tutorial"],
+        "complexity": ["Dasar"],
+        "format": ["Step-by-step"]
+      }
     },
     {
       "id": "2",
-      "bookId": "self-hosting-dengan-dokku",
-      "bookTitle": "Self Hosting dengan Dokku",
+      "bookId": "typescript-basics",
+      "bookTitle": "TypeScript Basics",
+      "comment": "Referensi yang bagus untuk belajar TypeScript. Cakupan materinya lengkap dan terstruktur dengan baik.",
+      "date": "2024-03-14",
       "reviewerName": "Jane Smith",
-      "rating": 4,
-      "comment": "Panduan yang sangat jelas untuk memulai self-hosting dengan Dokku. Sangat membantu untuk developer yang ingin mengelola server sendiri.",
-      "date": "2024-03-19T15:30:00Z"
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual"]
+      }
     },
     {
       "id": "3",
+      "bookId": "node-js-guide",
+      "bookTitle": "Node.js Guide",
+      "comment": "Panduan praktis untuk memulai dengan Node.js. Sangat cocok untuk pemula yang ingin belajar backend development.",
+      "date": "2024-03-13",
+      "reviewerName": "Mike Johnson",
+      "rating": 2,
+      "tags": {
+        "purpose": ["Tutorial", "Referensi"],
+        "complexity": ["Dasar"],
+        "format": ["Step-by-step"]
+      }
+    },
+    {
+      "id": "4",
+      "bookId": "wonderful-wizard-of-oz",
+      "bookTitle": "The Wonderful Wizard of Oz",
+      "comment": "Karya klasik yang luar biasa! Sebagai guru SD, saya sering menggunakan buku ini untuk mengajarkan nilai-nilai moral kepada murid-murid. Ceritanya yang sederhana namun penuh makna membuat anak-anak mudah memahami pesan tentang persahabatan, keberanian, dan kebijaksanaan.",
+      "date": "2024-03-20",
+      "reviewerName": "Bu Ani",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi", "Inspirasi"],
+        "complexity": ["Dasar"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "5",
+      "bookId": "wonderful-wizard-of-oz",
+      "bookTitle": "The Wonderful Wizard of Oz",
+      "comment": "Sebagai mahasiswa sastra, saya sangat mengapresiasi kedalaman makna dalam buku ini. Penggunaan alegori dan simbolisme yang cerdas membuat cerita ini bisa dinikmati di berbagai level. Sangat menarik melihat bagaimana Baum menggunakan perjalanan Dorothy untuk menggambarkan pencarian jati diri dan kedewasaan.",
+      "date": "2024-03-19",
+      "reviewerName": "Rudi",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "6",
+      "bookId": "wonderful-wizard-of-oz",
+      "bookTitle": "The Wonderful Wizard of Oz",
+      "comment": "Buku favorit anak saya! Dia sangat menyukai petualangan Dorothy dan teman-temannya. Saya suka bagaimana cerita ini mengajarkan tentang persahabatan dan kerja sama tim. Setiap karakter memiliki keunikan dan kekurangan masing-masing, tapi bersama-sama mereka bisa mengatasi semua rintangan.",
+      "date": "2024-03-18",
+      "reviewerName": "Pak Budi",
+      "rating": 2,
+      "tags": {
+        "purpose": ["Inspirasi"],
+        "complexity": ["Dasar"],
+        "format": ["Step-by-step"]
+      }
+    },
+    {
+      "id": "7",
+      "bookId": "wonderful-wizard-of-oz",
+      "bookTitle": "The Wonderful Wizard of Oz",
+      "comment": "Sebagai penulis, saya sangat terinspirasi oleh cara Baum membangun dunia Oz. Deskripsi yang detail dan karakter yang kuat membuat pembaca mudah membayangkan setiap adegan. Buku ini adalah contoh sempurna bagaimana menulis cerita anak yang menghibur sekaligus bermakna.",
+      "date": "2024-03-17",
+      "reviewerName": "Maya",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi", "Inspirasi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual", "Step-by-step"]
+      }
+    },
+    {
+      "id": "8",
+      "bookId": "wonderful-wizard-of-oz",
+      "bookTitle": "The Wonderful Wizard of Oz",
+      "comment": "Buku ini mengajarkan bahwa setiap orang memiliki kekuatan dalam dirinya sendiri. Saya suka bagaimana setiap karakter menemukan bahwa apa yang mereka cari sebenarnya sudah ada dalam diri mereka. Pesan yang sangat relevan untuk semua usia.",
+      "date": "2024-03-16",
+      "reviewerName": "Dewi",
+      "rating": 2,
+      "tags": {
+        "purpose": ["Inspirasi"],
+        "complexity": ["Dasar", "Menengah"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "9",
       "bookId": "software-engineers-notes",
       "bookTitle": "Software Engineer's Notes",
-      "reviewerName": "Alex Johnson",
-      "rating": 5,
-      "comment": "Kumpulan catatan yang sangat berharga untuk software engineer. Berisi best practices dan tips yang bisa langsung diterapkan.",
-      "date": "2024-03-18T09:15:00Z"
+      "comment": "Buku yang sangat berharga untuk software engineer di semua level. Pengalaman dan insight yang dibagikan sangat relevan dengan tantangan sehari-hari dalam pengembangan software. Saya suka bagaimana penulis membagikan best practices dan anti-patterns yang sering ditemui di lapangan.",
+      "date": "2024-03-25",
+      "reviewerName": "Andi (Senior Engineer)",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "10",
+      "bookId": "software-engineers-notes",
+      "bookTitle": "Software Engineer's Notes",
+      "comment": "Sebagai junior developer, buku ini membantu saya memahami banyak konsep yang tidak diajarkan di bangku kuliah. Penjelasannya praktis dan mudah dipahami, dengan contoh-contoh yang relevan dengan dunia kerja. Sangat direkomendasikan untuk fresh graduate!",
+      "date": "2024-03-24",
+      "reviewerName": "Budi (Junior Developer)",
+      "rating": 2,
+      "tags": {
+        "purpose": ["Tutorial", "Referensi"],
+        "complexity": ["Dasar"],
+        "format": ["Step-by-step"]
+      }
+    },
+    {
+      "id": "11",
+      "bookId": "software-engineers-notes",
+      "bookTitle": "Software Engineer's Notes",
+      "comment": "Buku yang sangat membantu untuk tech lead seperti saya. Banyak insight tentang bagaimana mengelola tim dan proyek dengan lebih efektif. Saya suka bagian tentang code review dan technical decision making.",
+      "date": "2024-03-23",
+      "reviewerName": "Citra (Tech Lead)",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "12",
+      "bookId": "software-engineers-notes",
+      "bookTitle": "Software Engineer's Notes",
+      "comment": "Buku yang sangat inspiratif! Saya suka bagaimana penulis membagikan pengalaman dan pembelajaran dari berbagai proyek. Banyak tips praktis yang bisa langsung diterapkan di pekerjaan sehari-hari.",
+      "date": "2024-03-22",
+      "reviewerName": "Dian (Full Stack Developer)",
+      "rating": 2,
+      "tags": {
+        "purpose": ["Inspirasi", "Referensi"],
+        "complexity": ["Dasar", "Menengah"],
+        "format": ["Konseptual"]
+      }
+    },
+    {
+      "id": "13",
+      "bookId": "software-engineers-notes",
+      "bookTitle": "Software Engineer's Notes",
+      "comment": "Sebagai DevOps engineer, saya sangat mengapresiasi bagian tentang deployment dan infrastructure. Banyak best practices yang bisa diterapkan untuk meningkatkan kualitas dan keamanan sistem.",
+      "date": "2024-03-21",
+      "reviewerName": "Eko (DevOps Engineer)",
+      "rating": 3,
+      "tags": {
+        "purpose": ["Referensi"],
+        "complexity": ["Menengah"],
+        "format": ["Konseptual", "Step-by-step"]
+      }
     }
   ]
 } 

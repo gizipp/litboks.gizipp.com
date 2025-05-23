@@ -1,0 +1,42 @@
+---
+interface Props {
+  tags?: {
+    purpose?: string[];
+    complexity?: string[];
+    format?: string[];
+  };
+  size?: 'sm' | 'md';
+  class?: string;
+}
+
+const { tags, size = 'md', class: className } = Astro.props;
+
+const sizeClasses = {
+  sm: 'text-xs px-2 py-0.5',
+  md: 'text-sm px-2.5 py-1'
+};
+
+const tagIcons = {
+  purpose: '🎯',
+  complexity: '🌱',
+  format: '📝'
+};
+
+const tagLabels = {
+  purpose: 'Tujuan',
+  complexity: 'Level',
+  format: 'Format'
+};
+---
+
+<div class={`flex flex-wrap gap-2 ${className || ''}`}>
+  {tags && Object.entries(tags).map(([key, values]) => (
+    values && values.map(value => (
+      <span class={`inline-flex items-center gap-1 bg-gray-100 text-gray-700 rounded-full ${sizeClasses[size]}`}>
+        <span>{tagIcons[key as keyof typeof tagIcons]}</span>
+        <span class="font-medium">{tagLabels[key as keyof typeof tagLabels]}:</span>
+        <span>{value}</span>
+      </span>
+    ))
+  ))}
+</div> 

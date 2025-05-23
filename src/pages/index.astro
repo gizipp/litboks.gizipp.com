@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import BookCard from '../components/BookCard.astro';
 import SubscribeForm from '../components/SubscribeForm.astro';
-import RatingStars from '../components/RatingStars.astro';
+import DiamondRating from '../components/DiamondRating.astro';
+import ReviewTags from '../components/ReviewTags.astro';
 import booksData from '../../books.json';
 import reviewsData from '../../reviews.json';
 
@@ -28,10 +29,15 @@ interface Review {
 	id: string;
 	bookId: string;
 	bookTitle: string;
-	reviewerName: string;
-	rating: number;
 	comment: string;
 	date: string;
+	reviewerName: string;
+	rating: 1 | 2 | 3;
+	tags?: {
+		purpose?: string[];
+		complexity?: string[];
+		format?: string[];
+	};
 }
 
 const { categories, metadata } = booksData as { categories: Category[], metadata: { categories: { id: string, name: string }[] } };
@@ -76,19 +82,23 @@ const recentReviews = [...reviews].sort((a, b) => new Date(b.date).getTime() - n
 
 		<!-- Recent Reviews Section -->
 		<section class="mb-12">
-			<h2 class="text-2xl font-bold mb-6">Review Terbaru</h2>
+			<h2 class="text-2xl font-bold mb-6">Ulasan Terbaru</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{recentReviews.map((review) => (
-					<div class="bg-white rounded-lg shadow-md p-6">
-						<div class="flex items-center justify-between mb-4">
-							<h3 class="text-lg font-semibold">
-								<a href={`/buku/${review.bookId}`} class="hover:text-blue-600">
-									{review.bookTitle}
-								</a>
-							</h3>
-							<RatingStars rating={review.rating} size="sm" />
+					<div class="bg-white p-6 rounded-lg shadow-sm">
+						<h3 class="font-semibold mb-2">
+							<a href={`/buku/${review.bookId}`} class="hover:text-blue-600">
+								{review.bookTitle}
+							</a>
+						</h3>
+						<div class="flex items-center gap-4 mb-3">
+							<DiamondRating rating={review.rating} size="sm" />
+							<span class="text-sm text-gray-500">
+								{review.rating === 1 ? 'Berkualitas' : review.rating === 2 ? 'Sangat Berkualitas' : 'Premium'}
+							</span>
 						</div>
 						<p class="text-gray-600 mb-4 line-clamp-3">{review.comment}</p>
+						{review.tags && <ReviewTags tags={review.tags} size="sm" class="mb-4" />}
 						<div class="flex items-center justify-between text-sm text-gray-500">
 							<span>{review.reviewerName}</span>
 							<time datetime={review.date}>

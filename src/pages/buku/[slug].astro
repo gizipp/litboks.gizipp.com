@@ -1,8 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import RatingStars from '../../components/RatingStars.astro';
+import DiamondRating from '../../components/DiamondRating.astro';
+import ReviewTags from '../../components/ReviewTags.astro';
 import ReviewForm from '../../components/ReviewForm.astro';
 import booksData from '../../../books.json';
+import reviewsJson from '../../../reviews.json';
 
 interface Book {
 	id: string;
@@ -22,6 +24,21 @@ interface Category {
 	books: Book[];
 }
 
+interface Review {
+	id: string;
+	bookId: string;
+	bookTitle: string;
+	comment: string;
+	date: string;
+	reviewerName: string;
+	rating: 1 | 2 | 3;
+	tags?: {
+		purpose?: string[];
+		complexity?: string[];
+		format?: string[];
+	};
+}
+
 // Generate static paths for all book slugs
 export async function getStaticPaths() {
 	const booksData = await import('../../../books.json');
@@ -33,6 +50,7 @@ export async function getStaticPaths() {
 }
 
 const { categories } = booksData as { categories: Category[] };
+const { reviews } = reviewsJson as { reviews: Review[] };
 
 // Get book slug from URL
 const { slug } = Astro.params;
@@ -58,6 +76,11 @@ const bookCategory = categories.find(category =>
 const relatedBooks = bookCategory?.books
 	.filter(b => b.id !== book.id)
 	.slice(0, 5) || [];
+
+// Get reviews for this book
+const bookReviews = reviews
+	.filter(review => review.bookId === book.id)
+	.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <Layout title={`${book.title} - LITBOKS`}>
@@ -107,8 +130,52 @@ const relatedBooks = bookCategory?.books
 
 			<!-- Review Section -->
 			<section class="mb-12">
-				<h2 class="text-2xl font-bold mb-6">Review</h2>
-				<ReviewForm bookId={book.id} />
+				<h2 class="text-2xl font-bold mb-6">Ulasan</h2>
+				
+				<!-- Existing Reviews -->
+				<div class="space-y-6 mb-8">
+					{bookReviews.length === 0 ? (
+						<div class="bg-white p-6 rounded-lg shadow-sm text-center">
+							<p class="text-gray-500">
+								Belum ada ulasan. <a 
+									href="#review-form" 
+									class="font-bold text-blue-600 hover:text-blue-700 transition-colors"
+								>
+									Tulis Ulasan Pertama
+								</a>
+							</p>
+						</div>
+					) : (
+						bookReviews.map((review) => (
+							<div class="bg-white p-6 rounded-lg shadow-sm">
+								<div class="flex items-center gap-4 mb-3">
+									<DiamondRating rating={review.rating} size="sm" />
+									<span class="text-sm text-gray-500">
+										{review.rating === 1 ? 'Berkualitas' : review.rating === 2 ? 'Sangat Berkualitas' : 'Premium'}
+									</span>
+								</div>
+								<p class="text-gray-600 mb-4">{review.comment}</p>
+								{review.tags && <ReviewTags tags={review.tags} size="sm" class="mb-4" />}
+								<div class="flex items-center justify-between text-sm text-gray-500">
+									<span>{review.reviewerName}</span>
+									<time datetime={review.date}>
+										{new Date(review.date).toLocaleDateString('id-ID', {
+											year: 'numeric',
+											month: 'long',
+											day: 'numeric'
+										})}
+									</time>
+								</div>
+							</div>
+						))
+					)}
+				</div>
+
+				<!-- Review Form -->
+				<div id="review-form" class="bg-white p-6 rounded-lg shadow-sm">
+					<h3 class="text-lg font-semibold mb-4">Tulis Ulasan</h3>
+					<ReviewForm bookId={book.id} />
+				</div>
 			</section>
 
 			<!-- Related Books -->
