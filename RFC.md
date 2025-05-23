@@ -1,4 +1,4 @@
-# 📬 RFC: LITBOKS – Platform Katalog & Review Ebook Indie
+# 📬 RFC: LITBOKS – Platform Katalog & Review Ebook
 
 **Request For Comments**  
 **ID:** RFC-001  
@@ -86,7 +86,7 @@ Ebook digital di Indonesia terus bertumbuh, namun kurang dukungan dari sisi revi
 Proyek ini akan dibuka di GitHub dan menerima kontribusi dari:
 
 - Developer frontend (Astro, React/Svelte)
-- Penulis & pembaca indie
+- Penulis & pembaca
 - Kurator literasi digital
 - Desainer UI/UX
 - Kontributor konten (review awal, editorial)

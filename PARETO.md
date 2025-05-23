@@ -196,7 +196,7 @@ Analisis ini mengidentifikasi 20% fitur yang akan memberikan 80% nilai untuk pla
 - Implementasi Netlify Forms untuk:
   - Form submit review
   - Form submit proposal buku
-  - Form submit buku indie
+  - Form submit buku
 - Implementasi routing dasar
 
 #### Fase 2 (Sprint 3-4)
@@ -246,7 +246,7 @@ Analisis ini mengidentifikasi 20% fitur yang akan memberikan 80% nilai untuk pla
 ### 1. Form Submission
 - Review buku
 - Proposal buku baru
-- Submit buku indie
+- Submit buku
 
 ### 2. Workflow Moderasi
 - Notifikasi email ke admin

@@ -107,7 +107,7 @@ src/
 - Follow reviewer & bookmark buku
 
 ### 💰 Tahap 3: Ekspansi & Monetisasi (Agustus+)
-- Donasi ke penulis indie
+- Donasi ke penulis
 - Kolaborasi platform (Prodig, Cabaca, dll)
 - Event komunitas & tantangan review
 
@@ -119,7 +119,7 @@ src/
 - Jumlah review aktif
 - Engagement komunitas (upvote, komentar)
 - Jumlah user terdaftar
-- CTR “Baca Sekarang”
+- CTR "Baca Sekarang"
 
 ---
 
@@ -135,8 +135,8 @@ src/
 
 - 10 Ebook gratis berkualitas (legal, PDF/EPUB)
 - 5 Review dummy
-- Panduan “Cara Menulis Review yang Bermanfaat”
-- Editorial: “Kenapa Ebook Gratis Bukan Murahan”
+- Panduan "Cara Menulis Review yang Bermanfaat"
+- Editorial: "Kenapa Ebook Gratis Bukan Murahan"
 
 ---
 
