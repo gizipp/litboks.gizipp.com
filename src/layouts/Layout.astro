@@ -8,8 +8,8 @@ interface Props {
 }
 
 const { 
-	title = "LITBOKS 🔖 Katalog Ebook Indie Gratis",
-	description = "Katalog dan review buku elektronik. Temukan ebook indie berkualitas yang tersedia secara gratis.",
+	title = "LITBOKS 🔖 Katalog Ebook Gratis",
+	description = "Katalog dan review buku elektronik. Temukan ebook berkualitas yang tersedia secara gratis.",
 	image = "/og.png"
 } = Astro.props;
 
@@ -64,7 +64,7 @@ const imageUrl = new URL(image, siteUrl).toString();
 						<a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a>
 						<a href="/tentang" class="text-gray-600 hover:text-gray-900">Tentang</a>
 						<a href="/submit" class="text-gray-600 hover:text-gray-900">
-							<span class="hidden sm:inline">Bagikan ebook indie gratis? </span>Kirim
+							<span class="hidden sm:inline">Bagikan ebook gratis? </span>Kirim
 						</a>
 					</div>
 				</div>

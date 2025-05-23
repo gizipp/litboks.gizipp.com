@@ -1,6 +1,6 @@
 # Katalog Buku LITBOKS
 
-Daftar buku indie yang tersedia di LITBOKS. Buku-buku ini bisa diakses secara gratis dan legal.
+Daftar buku yang tersedia di LITBOKS. Buku-buku ini bisa diakses secara gratis dan legal.
 
 > **Catatan**: Data lengkap tersedia di [`books.json`](./books.json)
 

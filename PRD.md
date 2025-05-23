@@ -10,16 +10,16 @@
 
 ## 🔍 1. Latar Belakang & Visi
 
-Banyak ebook indie digital berkualitas yang tidak dikenal luas karena kurangnya kurasi, review, dan eksposur. **LITBOKS** hadir untuk mengisi celah tersebut: platform katalog ebook gratis dan legal, dengan fitur review serta sorotan komunitas.
+Banyak ebook digital berkualitas yang tidak dikenal luas karena kurangnya kurasi, review, dan eksposur. **LITBOKS** hadir untuk mengisi celah tersebut: platform katalog ebook gratis dan legal, dengan fitur review serta sorotan komunitas.
 
 ### 🎯 Visi
-> “LITBOKS: Baca, Ulas, Sebar Karya Indie Digital”
+> “LITBOKS: Baca, Ulas, Sebar Karya Digital”
 
 ---
 
 ## 🚩 2. Tujuan Produk
 
-- Menyediakan katalog ebook indie gratis berkualitas.
+- Menyediakan katalog ebook gratis berkualitas.
 - Menyediakan fitur review dan diskusi oleh pembaca.
 - Meningkatkan visibilitas penulis independen.
 - Membangun komunitas literasi yang terbuka dan suportif.
@@ -125,7 +125,7 @@ src/
 
 ## 💬 8. Kolaborasi
 
-- Penulis indie → kurasi & izin distribusi
+- Penulis → kurasi & izin distribusi
 - Komunitas pembaca → review & feedback
 - Platform distribusi → kemitraan konten
 

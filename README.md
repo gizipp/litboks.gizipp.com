@@ -1,6 +1,6 @@
 # LITBOKS
 
-Platform katalog dan review ebook indie gratis.
+Platform katalog dan review ebook gratis.
 
 ## 🚀 Fitur
 

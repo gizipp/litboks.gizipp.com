@@ -2,7 +2,7 @@
 
 **Request For Comments**  
 **ID:** RFC-001  
-**Judul:** LITBOKS – Platform Kurasi & Review Ebook Indie Gratis  
+**Judul:** LITBOKS – Platform Kurasi & Review Ebook Gratis  
 **Penulis:** GIZ  
 **Tanggal:** 2025-05-21  
 **Status:** Draft  
@@ -12,9 +12,9 @@
 
 ## 🧭 Ringkasan
 
-**LITBOKS** adalah proyek katalog digital dan ruang baca terbuka untuk ebook indie gratis & legal. Platform ini akan memungkinkan pengguna untuk:
+**LITBOKS** adalah proyek katalog digital dan ruang baca terbuka untuk ebook gratis & legal. Platform ini akan memungkinkan pengguna untuk:
 
-- Menemukan buku indie digital berkualitas  
+- Menemukan buku digital berkualitas  
 - Membaca & mengunduh secara legal  
 - Memberikan review dan rating  
 - Terlibat dalam kurasi komunitas
@@ -32,7 +32,7 @@
 
 ## 🔍 Latar Belakang
 
-Ebook indie digital di Indonesia terus bertumbuh, namun kurang dukungan dari sisi review, kurasi, dan eksposur. Banyak platform besar tidak memberikan sorotan cukup untuk karya non-komersial. **LITBOKS** akan menjadi ruang alternatif yang etis, legal, dan terbuka untuk semua.
+Ebook digital di Indonesia terus bertumbuh, namun kurang dukungan dari sisi review, kurasi, dan eksposur. Banyak platform besar tidak memberikan sorotan cukup untuk karya non-komersial. **LITBOKS** akan menjadi ruang alternatif yang etis, legal, dan terbuka untuk semua.
 
 ---
 
