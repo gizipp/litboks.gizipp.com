@@ -1,6 +1,7 @@
 ---
 interface Props {
-  id: string;
+  id: number;
+  slug: string;
   title: string;
   author: string;
   genres: string[];
@@ -10,11 +11,11 @@ interface Props {
   cover?: string;
 }
 
-const { id, title, author, genres, description, url, status, cover } = Astro.props;
+const { id, slug, title, author, genres, description, url, status, cover } = Astro.props;
 ---
 
 <a 
-  href={`/buku/${id}`} 
+  href={`/buku/${id}/${slug}`} 
   data-umami-event={`View Book - ${title}`}
   class="block bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4"
 >

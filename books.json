@@ -7,7 +7,8 @@
       "name": "Teknologi & Programming",
       "books": [
         {
-          "id": "software-engineers-notes",
+          "id": 1,
+          "slug": "software-engineers-notes",
           "title": "Software Engineer's Notes",
           "author": "Kotaro",
           "genres": ["Teknologi", "Programming", "Software Development"],
@@ -18,7 +19,8 @@
           "cover": "software-engineers-notes.png"
         },
         {
-          "id": "self-hosting-dengan-dokku",
+          "id": 2,
+          "slug": "self-hosting-dengan-dokku",
           "title": "Self-hosting dengan Dokku",
           "author": "Adi P",
           "genres": ["DevOps", "Server", "Deployment"],
@@ -35,7 +37,8 @@
       "name": "Business & Product Management",
       "books": [
         {
-          "id": "getting-real",
+          "id": 3,
+          "slug": "getting-real",
           "title": "Getting Real",
           "author": "Jason Fried, David Heinemeier Hansson, Matt Linderman",
           "genres": ["Business", "Software Development", "Product Management"],
@@ -46,7 +49,8 @@
           "cover": "getting-real.png"
         },
         {
-          "id": "shape-up",
+          "id": 4,
+          "slug": "shape-up",
           "title": "Shape Up",
           "author": "Ryan Singer (Basecamp)",
           "genres": ["Product Management", "Software Development", "Work Culture"],
@@ -63,7 +67,8 @@
       "name": "Personal Development",
       "books": [
         {
-          "id": "resolusi-tanpa-basi",
+          "id": 5,
+          "slug": "resolusi-tanpa-basi",
           "title": "Resolusi Tanpa Basi",
           "author": "Darmawan Aji",
           "genres": ["Personal Development", "Productivity"],
@@ -80,7 +85,8 @@
       "name": "Fiksi & Sastra",
       "books": [
         {
-          "id": "wonderful-wizard-of-oz",
+          "id": 6,
+          "slug": "wonderful-wizard-of-oz",
           "title": "The Wonderful Wizard of Oz",
           "author": "L. Frank Baum",
           "genres": ["Fiksi", "Fantasi", "Sastra Anak"],
@@ -91,7 +97,8 @@
           "cover": "wonderful-wizard-of-oz.png"
         },
         {
-          "id": "awan-lalat",
+          "id": 7,
+          "slug": "awan-lalat",
           "title": "Awan Lalat",
           "author": "RA Laksmi Priti",
           "genres": ["Fiksi", "Sastra Anak", "Lingkungan"],

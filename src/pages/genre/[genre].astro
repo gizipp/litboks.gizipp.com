@@ -4,7 +4,8 @@ import BookCard from '../../components/BookCard.astro';
 import booksData from '../../../books.json';
 
 interface Book {
-	id: string;
+	id: number;
+	slug: string;
 	title: string;
 	author: string;
 	genres: string[];
