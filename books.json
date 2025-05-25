@@ -89,6 +89,17 @@
           "status": "available",
           "addedAt": "2024-05-21",
           "cover": "wonderful-wizard-of-oz.png"
+        },
+        {
+          "id": "awan-lalat",
+          "title": "Awan Lalat",
+          "author": "RA Laksmi Priti",
+          "genres": ["Fiksi", "Sastra Anak", "Lingkungan"],
+          "description": "Bolu pisang telah selesai dipanggang. Moi siap menyambut kedatangan Lea. Sayang, Lea mengurungkan niatnya untuk berkunjung ke rumah Moi. Apa yang terjadi? Buku ini mengajarkan anak-anak tentang pentingnya menjaga kebersihan lingkungan dan dampaknya terhadap kehidupan sehari-hari.",
+          "url": "https://budi.kemdikbud.go.id/baca/digital/awan-lalat",
+          "status": "available",
+          "addedAt": "2024-05-21",
+          "cover": "awan-lalat.png"
         }
       ]
     }
