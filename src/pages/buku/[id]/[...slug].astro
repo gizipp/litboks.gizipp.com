@@ -40,6 +40,7 @@ interface Review {
   };
 }
 
+// Generate static paths for all books
 // Generate static paths for all book IDs and slugs
 export async function getStaticPaths() {
   const booksData = await import('../../../../books.json');
@@ -123,9 +124,10 @@ const bookReviews = reviews
           </div>
 
           <a 
-            href={book.url}
+            href={`${book.url}?ref=litboks`}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event={`Read Book - ${book.title}`}
             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Baca Buku

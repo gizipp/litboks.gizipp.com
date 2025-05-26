@@ -40,7 +40,7 @@ interface Review {
   };
 }
 
-// Generate static paths for all book IDs
+// Generate static paths for all books
 export async function getStaticPaths() {
   const booksData = await import('../../../books.json');
   const categories = booksData.default.categories || booksData.categories;
@@ -120,9 +120,10 @@ const bookReviews = reviews
           </div>
 
           <a 
-            href={book.url}
+            href={`${book.url}?ref=litboks`}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event={`Read Book - ${book.title}`}
             class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Baca Buku
@@ -187,7 +188,7 @@ const bookReviews = reviews
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {relatedBooks.map((book) => (
               <a 
-                href={`/buku/${book.id}`}
+                href={`/buku/${book.id}/${book.slug}`}
                 class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <img 
