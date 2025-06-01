@@ -12,7 +12,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@supabase/supabase-js": "^2.39.3",
     "astro": "^5.7.14",
-    "astro-supabase": "^1.0.0"
+    "astro-supabase": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
