@@ -1,0 +1,46 @@
+---
+import { supabase } from '../lib/supabase';
+
+const { data: { session } } = await supabase.auth.getSession();
+const user = session?.user;
+---
+
+{user ? (
+  <div class="flex items-center gap-4">
+    <span class="text-sm text-gray-600">{user.email}</span>
+    <button
+      id="logout-button"
+      class="text-sm text-red-600 hover:text-red-700"
+    >
+      Logout
+    </button>
+  </div>
+) : (
+  <div class="flex items-center gap-4">
+    <a
+      href="/login"
+      class="text-sm text-gray-600 hover:text-gray-900"
+    >
+      Login
+    </a>
+    <a
+      href="/register"
+      class="text-sm bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+    >
+      Register
+    </a>
+  </div>
+)}
+
+<script>
+  import { supabase } from '../lib/supabase';
+
+  const logoutButton = document.getElementById('logout-button');
+  
+  if (logoutButton) {
+    logoutButton.addEventListener('click', async () => {
+      await supabase.auth.signOut();
+      window.location.href = '/';
+    });
+  }
+</script>

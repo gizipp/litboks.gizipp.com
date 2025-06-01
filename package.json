@@ -9,10 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.14"
+    "@astrojs/tailwind": "^6.0.2",
+    "@supabase/supabase-js": "^2.39.3",
+    "astro": "^5.7.14",
+    "astro-supabase": "^1.0.0"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^6.0.2",
     "@types/node": "^22.15.21",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.8.3"

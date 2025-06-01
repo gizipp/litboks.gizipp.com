@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import AuthButton from '../components/AuthButton.astro';
 
 interface Props {
 	title: string;
@@ -63,12 +64,13 @@ const imageUrl = new URL(image, siteUrl).toString();
 						<img src="/logo.svg" alt="LitBoks Logo" class="h-8 w-8" />
 						LitBoks
 					</a>
-					<div class="space-x-6">
+					<div class="flex items-center space-x-6">
 						<a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a>
 						<a href="/tentang" class="text-gray-600 hover:text-gray-900">Tentang</a>
 						<a href="/submit" class="text-gray-600 hover:text-gray-900">
 							<span class="hidden sm:inline">Bagikan ebook gratis? </span>Kirim
 						</a>
+						<AuthButton />
 					</div>
 				</div>
 			</nav>
